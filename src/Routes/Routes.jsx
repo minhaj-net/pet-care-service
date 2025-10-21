@@ -4,6 +4,7 @@ import HomePage from "../Pages/HomePage/HomePage";
 import Services from "../Pages/Services/Services";
 import Profile from "../Pages/Profile/Profile";
 import HeroSlider from "../Pages/HomePage/HomePage";
+import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +24,11 @@ export const router = createBrowserRouter([
         path:"/profile",
         Component:Profile
       },
+      {
+        path:"/service-details/:id",
+        Component:ServiceDetails,
+        loader:()=>fetch("/petCareData.json")
+      }
     ]
   },
 ]);

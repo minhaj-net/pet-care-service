@@ -3,7 +3,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "animate.css";
 import { FaStar } from "react-icons/fa";
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 
 const ServiceCard = () => {
   const cardData = useLoaderData();
@@ -65,9 +65,9 @@ const ServiceCard = () => {
                     ${service.price || "25.00"}
                   </p>
                 </div>
-                <button className="btn bg-gradient-to-r from-pink-400 to-orange-400 border-none text-white hover:scale-105 transition-transform mt-auto">
+                <Link to={`/service-details/${service.serviceId}`} className="btn bg-gradient-to-r from-pink-400 to-orange-400 border-none text-white hover:scale-105 transition-transform mt-auto">
                   View Details
-                </button>
+                </Link>
               </div>
             </div>
           </SwiperSlide>
