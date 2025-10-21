@@ -3,6 +3,7 @@ import MainLayout from "../MainLayout/MainLayout";
 import HomePage from "../Pages/HomePage/HomePage";
 import Services from "../Pages/Services/Services";
 import Profile from "../Pages/Profile/Profile";
+import HeroSlider from "../Pages/HomePage/HomePage";
 
 export const router = createBrowserRouter([
   {
@@ -11,7 +12,8 @@ export const router = createBrowserRouter([
     children:[
       {
         index:true,
-        Component:HomePage
+        Component:HomePage,
+        loader:()=>fetch("/petCareData.json")
       },
       {
         path:"/services",

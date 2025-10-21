@@ -1,9 +1,18 @@
 import React from 'react';
+import HeroSection from '../../Components/HeroSlider/HeroSlider';
+import HeroSlider from '../../Components/HeroSlider/HeroSlider';
+import ServicesCard from '../../Components/ServicesCard/ServicesCard';
+import WinterTips from '../../Components/WinterTips/WinterTips';
+import WinterCareTips from '../../Components/WinterTips/WinterTips';
+import ExpertVetsSection from '../../Components/ExpertVetsSection/ExpertVetsSection';
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>Thisd is Home Pages</h1>
+    <div data-aos="fade-right">
+      <HeroSlider></HeroSlider>
+      <ServicesCard></ServicesCard>
+      <WinterCareTips></WinterCareTips>
+      <ExpertVetsSection></ExpertVetsSection>
     </div>
   );
 };

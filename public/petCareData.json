@@ -1,0 +1,122 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.ibb.co.com/Y474kj3V/6361c549a882fb55392969ce0344f567.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Winter Grooming & Paw Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo.",
+    "image": "https://i.ibb.co.com/gh7ZxS6/bc037628906090e44ed84dd1616719a0.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Pet Heated Bed Rental",
+    "providerName": "WarmPaws Rentals",
+    "providerEmail": "contact@warmpaws.com",
+    "price": 15,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Rent heated beds and blankets to keep your pets cozy during cold nights.",
+    "image": "https://i.ibb.co.com/4ny0WMF3/6e551f99c83d10a0fb770e136719a3c4.jpg",
+    "category": "Accessories"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Winter Paw Wax Protection",
+    "providerName": "PawShield Care",
+    "providerEmail": "support@pawshield.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 5,
+    "description": "Protect your pet's paws from ice, salt, and cold with natural wax treatments.",
+    "image": "https://i.ibb.co.com/Nz5Tp6q/742603c10f98a75c54acb9ac3b3f0286.jpg",
+    "category": "Health"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Cozy Cat Sweater Fitting",
+    "providerName": "FelineWarmth",
+    "providerEmail": "info@felinewarmth.com",
+    "price": 22,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom sweaters and warm clothing tailored for cats to enjoy winter comfortably.",
+    "image": "https://i.ibb.co.com/b5xtNw69/f506d9d37857bf3158253afc5afd6831.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Winter Pet Massage Therapy",
+    "providerName": "RelaxPaws Spa",
+    "providerEmail": "hello@relaxpaws.com",
+    "price": 35,
+    "rating": 4.7,
+    "slotsAvailable": 3,
+    "description": "Soothing massages to improve circulation and warmth for pets during the cold season.",
+    "image": "https://i.ibb.co.com/KcMm82hv/ec6f0b13e95ecf38bbc65a5547220fd6.jpg",
+    "category": "Wellness"
+  },
+  {
+    "serviceId": 7,
+    "serviceName": "Winter Hydration & Nutrition Plan",
+    "providerName": "HealthyPaws Clinic",
+    "providerEmail": "care@healthypaws.com",
+    "price": 40,
+    "rating": 4.8,
+    "slotsAvailable": 5,
+    "description": "Custom diet plans to maintain hydration and energy for pets during winter.",
+    "image": "https://i.ibb.co.com/KjZnYCzw/59bca72176398b327b480db18a3f02eb.jpg",
+    "category": "Nutrition"
+  },
+  {
+    "serviceId": 8,
+    "serviceName": "Pet Winter Boot Fitting",
+    "providerName": "StepSafe Pets",
+    "providerEmail": "info@stepsafepets.com",
+    "price": 18,
+    "rating": 4.6,
+    "slotsAvailable": 7,
+    "description": "Fitting and sale of warm and protective boots to prevent cold injuries on paws.",
+    "image": "https://i.ibb.co.com/V0Vm1fCM/bd611cb2f685cbf862baac4b9695ad1a.jpg",
+    "category": "Accessories"
+  },
+  {
+    "serviceId": 9,
+    "serviceName": "Indoor Play & Warmth Sessions",
+    "providerName": "CozyPaws Daycare",
+    "providerEmail": "hello@cozypaws.com",
+    "price": 28,
+    "rating": 4.9,
+    "slotsAvailable": 8,
+    "description": "Supervised indoor play sessions with heating to keep pets active and warm.",
+    "image": "https://i.ibb.co.com/hRkt4k7v/2f44044eccf5890d1af670dab7a041bd.jpg",
+    "category": "Daycare"
+  },
+  {
+    "serviceId": 10,
+    "serviceName": "Winter Pet Safety Checkup",
+    "providerName": "SnowSafe Vet Clinic",
+    "providerEmail": "support@snowsafe.com",
+    "price": 50,
+    "rating": 5.0,
+    "slotsAvailable": 4,
+    "description": "Comprehensive health checkup to ensure pets stay healthy and safe during winter months.",
+    "image": "https://i.ibb.co.com/27YDK5Vr/fc05245b15388189b6ed1d8f63573380.jpg",
+    "category": "Health"
+  }
+]
