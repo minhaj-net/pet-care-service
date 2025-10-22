@@ -1,8 +1,23 @@
-import React from "react";
+import React, { use } from "react";
 import { NavLink } from "react-router";
 import 'animate.css';
+import { AuthContext } from "../../Provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
+   const { user ,logOut} = use(AuthContext);
+
+  const handleLogOut = () => {
+    // console.log("logout button clicek");
+    logOut()
+      .then(() => {
+        
+        // console.log(user);
+      })
+      .catch(() => {
+        // console.log(error.message);
+      });
+  };
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
@@ -55,11 +70,11 @@ const Navbar = () => {
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-2">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/616/616408.png"
+            src="https://i.ibb.co.com/kgKr0fv8/408b8be30984bdd7579416a6cb114275.jpg"
             alt="Logo"
-            className="w-10 h-10"
+            className="w-14 h-14 rounded-full"
           />
-          <span className="text-xl font-bold text-primary">PetCare</span>
+          <span className="text-xl font-bold text-pink-500">PetCare</span>
         </NavLink>
       </div>
 
@@ -73,8 +88,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `transition duration-300 ${
                     isActive
-                      ? "text-primary font-semibold border-b-2 border-primary pb-1"
-                      : "hover:text-primary"
+                      ? "text-pink-400 font-semibold border-b-2 border-pink-400 pb-1"
+                      : "hover:text-pink-400"
                   }`
                 }
               >
@@ -84,10 +99,36 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-
       {/* Navbar End */}
       <div className="navbar-end">
+        {user ? <div className="navbar navbar-end bg-base-100 px-5 shadow-sm">
+      
+
+      <div className="flex-none flex items-center gap-4">
+        {/* Avatar + Hover Name */}
+        <div className="relative group cursor-pointer">
+          <img
+            src={user.photoURL}
+            alt="User Avatar"
+            className="w-10 h-10 rounded-full border-2 border-primary transition-transform duration-300 group-hover:scale-110"
+          />
+          <span className="absolute left-1/2 -translate-x-1/2 -bottom-10 opacity-0 group-hover:opacity-100 bg-base-200 text-sm font-semibold text-primary px-3 py-1 rounded-lg shadow-md transition-all duration-300 whitespace-nowrap">
+           {user.displayName}
+          </span>
+        </div>
+
+        {/* Logout Button (always visible) */}
         <NavLink
+          onClick={handleLogOut}
+          className="btn px-8 bg-gradient-to-r from-pink-400 to-orange-400 text-white font-semibold border-none hover:scale-105 transition-transform duration-200 "
+        >
+          <span className="absolute inset-0 w-full h-full transition-transform duration-500 transform scale-x-0 origin-left bg-secondary group-hover:scale-x-100"></span>
+          <span className="relative z-10 group-hover:text-black  transition-all duration-300">
+            Log Out
+          </span>
+        </NavLink>
+      </div>
+    </div>:<NavLink
           to="/login"
           className="btn px-8 bg-gradient-to-r from-pink-400 to-orange-400 text-white font-semibold border-none hover:scale-105 transition-transform duration-200 "
         >
@@ -95,7 +136,7 @@ const Navbar = () => {
           <span className="relative z-10 group-hover:text-black  transition-all duration-300">
             Login
           </span>
-        </NavLink>
+        </NavLink>}
       </div>
     </div>
   );

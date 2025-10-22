@@ -9,7 +9,7 @@
 // import { toast } from "react-toastify";
 import React, { use, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import Navbar from "../../Components/Navbar/Navbar";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
@@ -20,7 +20,9 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 const SignIn = () => {
   // const googleProvider = new GoogleAuthProvider();
   const {signInUser,googleSignIn}=use(AuthContext)
-
+  const location =useLocation()
+  const navigate=useNavigate()
+  
   const [showPassword,setShowPassword]=useState()
   const handleSinIn = (e) => {
     e.preventDefault();
@@ -31,6 +33,7 @@ const SignIn = () => {
         console.log(result.user);
         e.target.reset();
         toast.success("Sign in Succesfull");
+        navigate(`${location.state?location.state:"/"}`)
       })
       .catch((error) => {
         toast.error(error.message);
@@ -42,6 +45,7 @@ const SignIn = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
+         navigate(`${location.state?location.state:"/"}`)
         toast.success("Sign in Succesfull");
       })
       .catch((error) => {

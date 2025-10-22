@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import Navbar from "../../Components/Navbar/Navbar";
 import { use, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -7,8 +7,10 @@ import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignUp = () => {
-  const {createUser,googleSignIn}=use(AuthContext)
+  const {createUser,googleSignIn,updateUser,setUser}=use(AuthContext)
+  const location =useLocation()
   const navigate=useNavigate()
+  
   const [showPassword,setShowPassword]=useState()
   console.log(createUser);
   const hanleRegister=(e)=>{
@@ -33,9 +35,16 @@ const SignUp = () => {
     createUser(email,password)
     .then(result=>{
       console.log(result.user);
+      const user=result.user
       toast.success("Sign up Successfully ")
       e.target.reset()
-      navigate("/")
+       navigate(`${location.state?location.state:"/"}`)
+       updateUser({displayName:name,photoURL:photo}).then(()=>{
+        setUser({...user,displayName:name,photoURL:photo})
+       }).catch(err=>{
+        console.log(err);
+        setUser(user)
+       })
     }).catch(err=>{
       console.log(err.message);
       toast.error(err.message)
@@ -48,7 +57,7 @@ const SignUp = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Sign up Succesfull");
-        navigate("/")
+         navigate(`${location.state?location.state:"/"}`)
       })
       .catch((error) => {
         toast.error(error.message);

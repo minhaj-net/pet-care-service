@@ -6,6 +6,8 @@ import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import MyProfilePage from "../Pages/Profile/Profile";
 import LoginPage from "../Pages/LoginPage/LoginPage";
 import SignUp from "../Pages/Register/Register";
+import Loading from "../Components/Loading/Loading";
+import PrivateRoute from "../Provider/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -15,7 +17,8 @@ export const router = createBrowserRouter([
       {
         index:true,
         Component:HomePage,
-        loader:()=>fetch("/petCareData.json")
+        loader:()=>fetch("/petCareData.json"),
+        hydrateFallbackElement:Loading
       },
       {
         path:"/services",
@@ -27,15 +30,19 @@ export const router = createBrowserRouter([
       },
       {
         path:"/service-details/:id",
-        Component:ServiceDetails,
-        loader:()=>fetch("/petCareData.json")
+        element:<PrivateRoute>
+          <ServiceDetails></ServiceDetails>
+        </PrivateRoute>,
+        loader:()=>fetch("/petCareData.json"),
+        hydrateFallbackElement:Loading,
       },
     ]
   },
   {
     path:"/login",
     Component:LoginPage,
-    loader:()=>fetch("/petCareData.json")
+    loader:()=>fetch("/petCareData.json"),
+    hydrateFallbackElement:Loading,
   },
   {
     path:"/signup",
