@@ -7,43 +7,50 @@
 // import { Link } from "react-router";
 // import { auth } from "../../Firebase/firebase.init";
 // import { toast } from "react-toastify";
-import React from "react";
+import React, { use, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router";
 import Navbar from "../../Components/Navbar/Navbar";
+import { AuthContext } from "../../Provider/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 
 const SignIn = () => {
   // const googleProvider = new GoogleAuthProvider();
-  // const handleSinIn = (e) => {
-  //   e.preventDefault();
-  //   const email = e.target.email.value;
-  //   const password = e.target.password.value;
-  //   signInWithEmailAndPassword(auth, email, password)
-  //     .then((result) => {
-  //       console.log(result.user);
-  //       e.target.reset();
-  //       toast.success("Sign in Succesfull");
-  //     })
-  //     .catch((error) => {
-  //       toast.error(error.message);
-  //     });
-  // };
+  const {signInUser,googleSignIn}=use(AuthContext)
 
-  // const handleGooglesignIn = (e) => {
-  //   e.preventDefault();
-  //   signInWithPopup(auth, googleProvider)
-  //     .then((result) => {
-  //       console.log(result.user);
-  //       toast.success("Sign in Succesfull");
-  //     })
-  //     .catch((error) => {
-  //       toast.error(error.message);
-  //     });
-  // };
+  const [showPassword,setShowPassword]=useState()
+  const handleSinIn = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    signInUser(email,password)
+      .then((result) => {
+        console.log(result.user);
+        e.target.reset();
+        toast.success("Sign in Succesfull");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
+
+  const handleGooglesignIn = (e) => {
+    e.preventDefault();
+    googleSignIn()
+      .then((result) => {
+        console.log(result.user);
+        toast.success("Sign in Succesfull");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
   return (
    <div>
+    <Toaster></Toaster>
     <Navbar></Navbar>
      <div className="hero bg-gradient-to-r from-pink-400 to-orange-400 relative overflow-hidden min-h-screen">
       
@@ -66,7 +73,7 @@ const SignIn = () => {
         "
         >
           <div className="card-body">
-            <form>
+            <form onSubmit={handleSinIn}>
               <fieldset className="fieldset">
                 <label className="label">Email</label>
                 <input
@@ -76,12 +83,15 @@ const SignIn = () => {
                   className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
                 <label className="label">Password</label>
-                <input
+               <div className="relative">
+                 <input
                   name="password"
-                  type="password"
+                  type={showPassword?"text":"password"}
                   placeholder="*******"
                   className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
+                <button onClick={()=>setShowPassword(!showPassword)} type="button" className="absolute top-[13px] right-5">{showPassword?<FaEyeSlash />:<FaEye />}</button>
+               </div>
                 <div>
                   <a className="link link-hover">Forgot password?</a>
                 </div>
@@ -97,6 +107,7 @@ const SignIn = () => {
                 {/* Google sign in button */}
               </fieldset>
               <button
+              onClick={handleGooglesignIn}
                 className="flex items-center justify-center gap-3 bg-white text-gray-800 px-5 py-2 rounded-lg w-full font-semibold hover:bg-gray-100 transition-colors cursor-pointer"
               >
                 <FcGoogle /> Continue With Google
