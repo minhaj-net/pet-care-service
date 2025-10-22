@@ -9,6 +9,7 @@ import ExpertVetsSection from '../../Components/ExpertVetsSection/ExpertVetsSect
 const HomePage = () => {
   return (
     <div data-aos="fade-right">
+      <title>PetCare-Home</title>
       <HeroSlider></HeroSlider>
       <ServicesCard></ServicesCard>
       <WinterCareTips></WinterCareTips>

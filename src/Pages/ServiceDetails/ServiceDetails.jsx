@@ -50,6 +50,7 @@ const ServiceDetails = () => {
 
   return (
     <section className="py-12 bg-gradient-to-b from-blue-50 via-white to-blue-100 animate__animated animate__fadeIn">
+      <title>Petcare-Service Details</title>
       <div className="max-w-5xl mx-auto px-6 md:px-0">
         {/* Service Banner */}
         <div className="rounded-2xl overflow-hidden shadow-lg mb-8">

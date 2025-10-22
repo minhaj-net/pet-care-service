@@ -74,19 +74,19 @@ const ExpertVetsSection = () => {
             <img
               src={vet.image}
               alt={vet.name}
-              className="w-28 h-28 object-cover rounded-full mb-4 border-4 border-blue-100 shadow-md"
+              className="w-28 h-28 object-cover rounded-full mb-4 border-4 border-pink-100 shadow-md"
             />
             {/* Name & Specialty */}
             <h3 className="text-xl font-semibold text-gray-800 mb-1">{vet.name}</h3>
-            <p className="text-blue-400 font-medium mb-3">{vet.specialty}</p>
+            <p className="text-pink-400 font-medium mb-3">{vet.specialty}</p>
             {/* Description */}
             <p className="text-gray-600 text-sm mb-4">{vet.description}</p>
             {/* Social Icons */}
             <div className="flex gap-4 mt-auto">
-              <a href={vet.social.facebook} className="text-blue-500 hover:text-blue-700 transition-colors">
+              <a href={vet.social.facebook} className="text-pink-500 hover:text-blue-700 transition-colors">
                 <FaFacebookF />
               </a>
-              <a href={vet.social.twitter} className="text-blue-400 hover:text-blue-600 transition-colors">
+              <a href={vet.social.twitter} className="text-pink-400 hover:text-blue-600 transition-colors">
                 <FaTwitter />
               </a>
               <a href={vet.social.instagram} className="text-pink-500 hover:text-pink-700 transition-colors">
@@ -94,7 +94,7 @@ const ExpertVetsSection = () => {
               </a>
             </div>
             {/* Optional View Profile Button */}
-            <button className="btn bg-gradient-to-r from-blue-400 to-blue-500 text-white mt-4 hover:scale-105 transition-transform border-none">
+            <button className="btn  w-full mt-4 bg-gradient-to-r from-pink-400 to-orange-400 text-white font-semibold border-none hover:scale-105 transition-transform duration-200">
               View Profile
             </button>
           </div>

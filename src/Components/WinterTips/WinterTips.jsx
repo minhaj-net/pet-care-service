@@ -7,27 +7,27 @@ const WinterCareTips = () => {
     {
       title: "Keep Pets Warm",
       description: "Provide cozy blankets or pet sweaters to protect from the cold.",
-      icon: <FaThermometerHalf className="text-blue-400" />,
+      icon: <FaThermometerHalf className="text-pink-400" />,
     },
     {
       title: "Limit Outdoor Time",
       description: "Reduce prolonged outdoor exposure during freezing temperatures.",
-      icon: <FaDog className="text-blue-400" />,
+      icon: <FaDog className="text-pink-400" />,
     },
     {
       title: "Protect Paws",
       description: "Use pet-safe booties or check paws for ice and salt after walks.",
-      icon: <FaPaw className="text-blue-400" />,
+      icon: <FaPaw className="text-pink-400" />,
     },
     {
       title: "Hydration is Key",
       description: "Ensure your pet has fresh water; winter air can be dehydrating.",
-      icon: <FaSnowflake className="text-blue-400" />,
+      icon: <FaSnowflake className="text-pink-400" />,
     },
     {
       title: "Healthy Diet",
       description: "Maintain proper nutrition to keep your pets healthy and energetic.",
-      icon: <FaHeart className="text-blue-400" />,
+      icon: <FaHeart className="text-pink-400" />,
     },
   ];
 

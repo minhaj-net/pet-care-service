@@ -89,7 +89,7 @@ const Navbar = () => {
       <div className="navbar-end">
         <NavLink
           to="/login"
-          className="relative inline-block px-5 py-2 font-semibold text-white rounded-lg overflow-hidden group bg-primary"
+          className="btn px-8 bg-gradient-to-r from-pink-400 to-orange-400 text-white font-semibold border-none hover:scale-105 transition-transform duration-200 "
         >
           <span className="absolute inset-0 w-full h-full transition-transform duration-500 transform scale-x-0 origin-left bg-secondary group-hover:scale-x-100"></span>
           <span className="relative z-10 group-hover:text-black  transition-all duration-300">
