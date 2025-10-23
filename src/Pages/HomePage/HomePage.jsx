@@ -5,6 +5,7 @@ import ServicesCard from '../../Components/ServicesCard/ServicesCard';
 import WinterTips from '../../Components/WinterTips/WinterTips';
 import WinterCareTips from '../../Components/WinterTips/WinterTips';
 import ExpertVetsSection from '../../Components/ExpertVetsSection/ExpertVetsSection';
+import PetCareServices from '../../Components/TreatmentPet/TreatmentPet';
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <ServicesCard></ServicesCard>
       <WinterCareTips></WinterCareTips>
       <ExpertVetsSection></ExpertVetsSection>
+      <PetCareServices></PetCareServices>
     </div>
   );
 };

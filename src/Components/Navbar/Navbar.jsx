@@ -55,8 +55,8 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     `transition duration-300 ${
                       isActive
-                        ? "text-primary font-semibold underline underline-offset-4"
-                        : "hover:text-primary"
+                        ? "text-pink-400 font-semibold underline underline-offset-4"
+                        : "hover:text-pink-400"
                     }`
                   }
                 >

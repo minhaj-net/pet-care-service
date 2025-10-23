@@ -21,12 +21,13 @@ export const router = createBrowserRouter([
         index:true,
         Component:HomePage,
         loader:()=>fetch("/petCareData.json"),
-        hydrateFallbackElement:Loading
+        hydrateFallbackElement:<Loading></Loading>
       },
       {
         path:"/services",
         Component:Services,
         loader:()=>fetch("/petCareData.json"),
+        hydrateFallbackElement:<Loading></Loading>,
       },
       {
         path:"/profile",
@@ -38,7 +39,7 @@ export const router = createBrowserRouter([
           <ServiceDetails></ServiceDetails>
         </PrivateRoute>,
         loader:()=>fetch("/petCareData.json"),
-        hydrateFallbackElement:Loading,
+       hydrateFallbackElement:<Loading></Loading>
       },
     ]
   },
@@ -46,7 +47,7 @@ export const router = createBrowserRouter([
     path:"/login",
     Component:LoginPage,
     loader:()=>fetch("/petCareData.json"),
-    hydrateFallbackElement:Loading,
+    hydrateFallbackElement:<Loading></Loading>
   },
   {
     path:"/signup",
