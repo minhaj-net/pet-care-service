@@ -58,22 +58,22 @@ const ServiceDetails = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex items-center gap-2 text-gray-700">
-              <FaUser className="text-blue-400" /> <span>{data.providerName}</span>
+              <FaUser className="text-pink-400" /> <span>{data.providerName}</span>
             </div>
             <div className="flex items-center gap-2 text-gray-700">
-              <FaEnvelope className="text-blue-400" /> <span>{data.providerEmail}</span>
+              <FaEnvelope className="text-pink-400" /> <span>{data.providerEmail}</span>
             </div>
             <div className="flex items-center gap-2 text-gray-700">
-              <FaDollarSign className="text-blue-400" /> <span>${data.price}</span>
+              <FaDollarSign className="text-pink-400" /> <span>${data.price}</span>
             </div>
             <div className="flex items-center gap-2 text-gray-700">
               <FaStar className="text-yellow-400" /> <span>{data.rating}</span>
             </div>
             <div className="flex items-center gap-2 text-gray-700">
-              <FaTag className="text-blue-400" /> <span>{data.category}</span>
+              <FaTag className="text-pink-400" /> <span>{data.category}</span>
             </div>
             <div className="flex items-center gap-2 text-gray-700">
-              <FaUser className="text-blue-400" /> <span>Service ID: {data .serviceId}</span>
+              <FaUser className="text-pink-400" /> <span>Service ID: {data .serviceId}</span>
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@ const ServiceDetails = () => {
             <div className="md:col-span-2 flex justify-end">
               <button
                 type="submit"
-                className="btn bg-gradient-to-r from-blue-400 to-blue-500 text-white hover:scale-105 transition-transform border-none"
+                className="btn px-8 bg-gradient-to-r from-pink-400 to-orange-400 text-white font-semibold border-none hover:scale-105 transition-transform duration-200 "
               >
                 Book Now
               </button>

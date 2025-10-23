@@ -74,12 +74,11 @@ const SignUp = () => {
         <div className="absolute w-72 h-72 bg-purple-400/30 rounded-full blur-xl top-10 left-10 animate-pulse"></div>
         <div className="absolute w-72 h-72 bg-blue-400/30 rounded-full blur-xl bottom-10 right-10 animate-pulse"></div>
       </div>
-      <div className="hero-content flex  justify-between  gap-63  flex-col lg:flex-row">
+      <div className="hero-content flex  justify-between gap-5 md:gap-63 lg:63  flex-col lg:flex-row">
         <div className="text-center   lg:text-left">
           <h1 className="text-4xl font-bold">Create Your Account</h1>
           <p className="py-6">
-            Join our community and unlock exclusive features. Your journey
-            begins here!
+            Join the PetCare family today and ensure your furry friends enjoy comfort, warmth, and happiness always.
           </p>
         </div>
         <div
@@ -89,6 +88,7 @@ const SignUp = () => {
         >
           <div className="card-body">
             <form onSubmit={hanleRegister}>
+              <h1 className="font-bold text-4xl mb-2">Sign Up</h1>
               <fieldset className="fieldset">
                 {/* Photo field */}
                 <label className="label">Name</label>

@@ -104,12 +104,14 @@ const MyProfilePage = () => {
   }
 
   return (
-    <div
-      className="min-h-screen bg-cover bg-center flex items-center justify-center relative"
-      style={{
-        backgroundImage:
-          "url('https://i.ibb.co.com/qbM24xf/ec6fcebfb6d4cf347e820b0264fbaae5.jpg')",
-      }}
+    <section>
+      <title>PetCare-Profile</title>
+      <div
+    className="min-h-screen bg-cover bg-center flex items-center justify-center relative"
+    style={{
+      backgroundImage:
+      "url('https://i.ibb.co.com/qbM24xf/ec6fcebfb6d4cf347e820b0264fbaae5.jpg')",
+    }}
     >
       <Toaster />
       {/* Overlay */}
@@ -208,6 +210,7 @@ const MyProfilePage = () => {
         </div>
       )}
     </div>
+    </section>
   );
 };
 

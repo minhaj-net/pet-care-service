@@ -67,12 +67,11 @@ const SignIn = () => {
         <div className="absolute w-72 h-72 bg-purple-400/30 rounded-full blur-xl top-10 left-10 animate-pulse"></div>
         <div className="absolute w-72 h-72 bg-blue-400/30 rounded-full blur-xl bottom-10 right-10 animate-pulse"></div>
       </div>
-      <div className="hero-content gap-64 flex-col lg:flex-row">
+      <div className="hero-content md:gap-64 lg:gap-63 gap-5 flex-col lg:flex-row">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Welcome Back</h1>
           <p className="py-6">
-            Sign in to continue your journey. Manage your account, explore new
-            features, and more.
+           Welcome back to WarmPaws! Log in and continue giving your beloved pets the care they deserve.
           </p>
         </div>
         <div
@@ -83,6 +82,7 @@ const SignIn = () => {
           <div className="card-body">
             <form onSubmit={handleSinIn}>
               <fieldset className="fieldset">
+                <h1  className="font-bold text-3xl mb-2">Login</h1>
                 <label className="label">Email</label>
                 <input
                  onChange={(e) => setEmail(e.target.value)}

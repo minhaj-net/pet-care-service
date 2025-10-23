@@ -9,11 +9,13 @@ import SignUp from "../Pages/Register/Register";
 import Loading from "../Components/Loading/Loading";
 import PrivateRoute from "../Provider/PrivateRoute";
 import ForgetPasswordPage from "../Pages/ForgetPasswordPage/ForgetPasswordPage";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component:MainLayout,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         index:true,
@@ -23,7 +25,8 @@ export const router = createBrowserRouter([
       },
       {
         path:"/services",
-        Component:Services
+        Component:Services,
+        loader:()=>fetch("/petCareData.json"),
       },
       {
         path:"/profile",
@@ -52,5 +55,5 @@ export const router = createBrowserRouter([
   {
     path:"/forget-password",
     Component:ForgetPasswordPage
-  }
+  },
 ]);

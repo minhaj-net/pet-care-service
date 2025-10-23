@@ -10,6 +10,7 @@ const ServiceCard = () => {
 
   return (
     <section className="py-16 bg-gradient-to-b from-blue-50 via-pink-50 to-white">
+      
       <div className="text-center mb-12 animate__animated animate__fadeInDown">
         <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
           Popular Winter Care Services
