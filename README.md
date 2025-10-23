@@ -1,16 +1,41 @@
-# React + Vite
+# 🐾 Pet Care Service
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Project Purpose
+This project is designed to [briefly describe the purpose — e.g., provide pet care services, manage user profiles, allow booking appointments, ]  
+It demonstrates the use of **React**, **Tailwind CSS**, **DaisyUI**, and other modern web technologies to create an interactive and user-friendly web application.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live URL
+🔗 **Live Link:** [https://pet-care-service-ff99e.web.app/](https://pet-care-service-ff99e.web.app/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##  Key Features
+-  Beautiful and responsive UI using **Tailwind CSS** and **DaisyUI**  
+-  Firebase authentication (Login, Register, Google Sign-In,Update Profile, Forget Password)  
+-  Fully responsive layout for mobile, tablet, and desktop  
+-  Dynamic routing using **React Router**  
+-  JSON-based data rendering (Services, Pets, Hero slider,)  
+-  Static Data or Fake JSON Data (Winter Care Tips,Expert Vets ,Pet Treatment)
+-  Smooth animations using **Animate.css**  
+-  “Book Service” and “Update Profile” functionalities implemented  
+-  Hosted on Firebase for live deployment  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  npm Packages Used
+| Package Name | Purpose |
+|---------------|----------|
+| **react** | Core library for building UI |
+| **react-router** | Routing and navigation |
+| **firebase** | Authentication and hosting |
+| **react-icons** | Icons for UI enhancement |
+| **tailwindcss** | Utility-first CSS framework |
+| **daisyui** | Tailwind component library |
+| **animate.css** | For adding animations |
+| **swiper** | Image slider and hero section animations |
+| **react-hot-toastify** | Toast notifications  |
+
+---
+
