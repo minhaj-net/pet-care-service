@@ -1,12 +1,3 @@
-// import {
-//   GoogleAuthProvider,
-//   signInWithEmailAndPassword,
-//   signInWithPopup,
-// } from "firebase/auth";
-// import { FcGoogle } from "react-icons/fc";
-// import { Link } from "react-router";
-// import { auth } from "../../Firebase/firebase.init";
-// import { toast } from "react-toastify";
 import React, { use, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router";
@@ -19,7 +10,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignIn = () => {
   // const googleProvider = new GoogleAuthProvider();
-  const {signInUser,googleSignIn}=use(AuthContext)
+  const {signInUser,googleSignIn,resetPassword}=use(AuthContext)
   const location =useLocation()
   const [email, setEmail] = useState("");
   const navigate=useNavigate()
@@ -55,6 +46,13 @@ const SignIn = () => {
   };
    const handleForgetPassword = () => {
     navigate("/forget-password", { state: { email } });
+    // navigate("/forget-password", { state: { email } })
+    resetPassword(email)
+    .then(result=>{
+      console.log(result);
+    }).catch(err=>{
+      console.log(err);
+    })
   };
   return (
    <div>
@@ -103,7 +101,7 @@ const SignIn = () => {
                </div>
                 <div>
                  <p
-                      onClick={() => navigate("/forget-password", { state: { email } })}
+                      onClick={handleForgetPassword }
                       className="link link-hover cursor-pointer"
                     >
                       Forgot password?
