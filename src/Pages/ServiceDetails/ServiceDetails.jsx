@@ -17,21 +17,9 @@ const ServiceDetails = () => {
     SetData(newDetails);
   }, [cardData, id]);
 
-  // Fake JSON data for one service
-  const service = {
-    serviceId: "SVC001",
-    serviceName: "Winter Cozy Pet Grooming",
-    providerName: "Happy Paws Grooming",
-    providerEmail: "contact@happypaws.com",
-    description:
-      "Keep your furry friend warm and clean this winter with our premium grooming services. Includes cozy styling, nail trimming, and gentle brushing.",
-    price: 45.0,
-    image: "https://images.unsplash.com/photo-1601758123927-7c0f8b10f0d4?auto=format&fit=crop&w=800&q=80",
-    rating: 4.8,
-    category: "Grooming",
-  };
 
-  // Form state
+  
+
   const [formData, setFormData] = useState({ name: "", email: "" });
   const [showToast, setShowToast] = useState(false);
 
@@ -41,10 +29,10 @@ const ServiceDetails = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Show toast
+    
     setShowToast(true);
     setTimeout(() => setShowToast(false), 3000);
-    // Clear form
+   
     setFormData({ name: "", email: "" });
   };
 
@@ -64,7 +52,7 @@ const ServiceDetails = () => {
         {/* Service Details */}
         <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            {service.serviceName}
+            {data.serviceName}
           </h2>
           <p className="text-gray-700 text-lg mb-6">{data.description}</p>
 

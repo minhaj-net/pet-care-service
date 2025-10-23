@@ -8,6 +8,7 @@ import LoginPage from "../Pages/LoginPage/LoginPage";
 import SignUp from "../Pages/Register/Register";
 import Loading from "../Components/Loading/Loading";
 import PrivateRoute from "../Provider/PrivateRoute";
+import ForgetPasswordPage from "../Pages/ForgetPasswordPage/ForgetPasswordPage";
 
 export const router = createBrowserRouter([
   {
@@ -47,5 +48,9 @@ export const router = createBrowserRouter([
   {
     path:"/signup",
     Component:SignUp
+  },
+  {
+    path:"/forget-password",
+    Component:ForgetPasswordPage
   }
 ]);

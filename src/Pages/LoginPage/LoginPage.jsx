@@ -21,6 +21,7 @@ const SignIn = () => {
   // const googleProvider = new GoogleAuthProvider();
   const {signInUser,googleSignIn}=use(AuthContext)
   const location =useLocation()
+  const [email, setEmail] = useState("");
   const navigate=useNavigate()
   
   const [showPassword,setShowPassword]=useState()
@@ -52,6 +53,9 @@ const SignIn = () => {
         toast.error(error.message);
       });
   };
+   const handleForgetPassword = () => {
+    navigate("/forget-password", { state: { email } });
+  };
   return (
    <div>
     <Toaster></Toaster>
@@ -81,6 +85,7 @@ const SignIn = () => {
               <fieldset className="fieldset">
                 <label className="label">Email</label>
                 <input
+                 onChange={(e) => setEmail(e.target.value)}
                   name="email"
                   type="email"
                   placeholder="Email"
@@ -97,7 +102,12 @@ const SignIn = () => {
                 <button onClick={()=>setShowPassword(!showPassword)} type="button" className="absolute top-[13px] right-5">{showPassword?<FaEyeSlash />:<FaEye />}</button>
                </div>
                 <div>
-                  <a className="link link-hover">Forgot password?</a>
+                 <p
+                      onClick={() => navigate("/forget-password", { state: { email } })}
+                      className="link link-hover cursor-pointer"
+                    >
+                      Forgot password?
+                    </p>
                 </div>
                 <button className="btn  w-full bg-gradient-to-r from-pink-400 to-orange-400 text-white font-semibold border-none hover:scale-105 transition-transform duration-200">
                   Login
