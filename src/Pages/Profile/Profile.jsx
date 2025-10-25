@@ -115,7 +115,7 @@ const MyProfilePage = () => {
         }}
       >
         <Toaster />
-        <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
+        <div className="absolute inset-0  bg-opacity-50 backdrop-blur-sm"></div>
 
         {/* ✅ Always visible profile card */}
         <div className="relative z-10 bg-white bg-opacity-90 rounded-2xl shadow-2xl p-8 w-[90%] md:w-[500px] animate__animated animate__fadeInLeft">
