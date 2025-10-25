@@ -32,7 +32,7 @@ const WinterCareTips = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-blue-50 via-white to-blue-100">
+    <section className="py-16 bg-linear-to-b from-blue-50 via-white to-blue-100">
       {/* Header */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">

@@ -10,6 +10,7 @@ const SignUp = () => {
   const {createUser,googleSignIn,updateUser,setUser}=use(AuthContext)
   const location =useLocation()
   const navigate=useNavigate()
+    const [error,setError]=useState()
   
   const [showPassword,setShowPassword]=useState()
   console.log(createUser);
@@ -24,10 +25,10 @@ const SignUp = () => {
     const regexCase = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
 
     if(!minLengthRegex.test(password)){
-      toast.error("Password must be at least 6 characters long")
+      setError("Password must be at least 6 characters long")
       return
     }else if(!regexCase.test(password)){
-      toast.error("Password must contain at least one uppercase and one lowercase letter")
+      setError("Password must contain at least one uppercase and one lowercase letter")
       return
     }
 
@@ -68,7 +69,7 @@ const SignUp = () => {
   <div>
       <Toaster></Toaster>
     <Navbar></Navbar>
-      <div className="hero bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 relative overflow-hidden min-h-screen">
+      <div className="hero bg-linear-to-br from-indigo-500 via-purple-600 to-pink-500 relative overflow-hidden min-h-screen">
       <title>Firebase-Sign up</title>
       <div className="absolute inset-0">
         <div className="absolute w-72 h-72 bg-purple-400/30 rounded-full blur-xl top-10 left-10 animate-pulse"></div>
@@ -125,7 +126,8 @@ const SignUp = () => {
                 />
                      <button onClick={()=>setShowPassword(!showPassword)} type="button" className="absolute top-[13px] right-5">{showPassword?<FaEyeSlash />:<FaEye />}</button>
                 </div>
-                <button className="btn  w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold border-none hover:scale-105 transition-transform duration-200">
+                <p className="text-red-500 font-medium">{error}</p>
+                <button className="btn  w-full bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold border-none hover:scale-105 transition-transform duration-200">
                   Sign up
                 </button>
                  {/* Devider */}

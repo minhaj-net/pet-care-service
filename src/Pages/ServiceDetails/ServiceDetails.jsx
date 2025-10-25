@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { FaUser, FaEnvelope, FaDollarSign, FaStar, FaTag } from "react-icons/fa";
 import "animate.css";
-import { useLoaderData, useParams } from "react-router";
+import { Link, useLoaderData, useParams } from "react-router";
+import { RiArrowGoBackFill } from "react-icons/ri";
 
 const ServiceDetails = () => {
   const {id}=useParams()
@@ -17,9 +18,6 @@ const ServiceDetails = () => {
     SetData(newDetails);
   }, [cardData, id]);
 
-
-  
-
   const [formData, setFormData] = useState({ name: "", email: "" });
   const [showToast, setShowToast] = useState(false);
 
@@ -29,10 +27,8 @@ const ServiceDetails = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
     setShowToast(true);
     setTimeout(() => setShowToast(false), 3000);
-   
     setFormData({ name: "", email: "" });
   };
 
@@ -111,7 +107,13 @@ const ServiceDetails = () => {
                 required
               />
             </div>
-            <div className="md:col-span-2 flex justify-end">
+            <div className="md:col-span-2 flex justify-end gap-4">
+              <Link
+                to="/"
+                className="btn px-8 bg-gradient-to-r from-blue-400 to-violet-400 text-white font-semibold border-none hover:scale-105 transition-transform duration-200 "
+              >
+               <RiArrowGoBackFill /> Go Back
+              </Link>
               <button
                 type="submit"
                 className="btn px-8 bg-gradient-to-r from-pink-400 to-orange-400 text-white font-semibold border-none hover:scale-105 transition-transform duration-200 "

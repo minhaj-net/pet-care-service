@@ -52,7 +52,7 @@ const ExpertVetsSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-blue-50 via-white to-blue-100">
+    <section className="py-16 bg-linear-to-b from-blue-50 via-white to-blue-100">
       {/* Header */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4 animate__animated animate__fadeInDown">
@@ -94,7 +94,7 @@ const ExpertVetsSection = () => {
               </a>
             </div>
             {/* Optional View Profile Button */}
-            <button className="btn  w-full mt-4 bg-gradient-to-r from-pink-400 to-orange-400 text-white font-semibold border-none hover:scale-105 transition-transform duration-200">
+            <button className="btn  w-full mt-4 bg-linear-to-r from-pink-400 to-orange-400 text-white font-semibold border-none hover:scale-105 transition-transform duration-200">
               View Profile
             </button>
           </div>

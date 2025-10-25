@@ -8,7 +8,7 @@ const Footer = () => {
 
         {/* ===== Contact Info ===== */}
         <div className="animate__animated animate__fadeInUp animate__delay-1s">
-          <h3 className="text-xl font-bold text-primary mb-3">Contact Info</h3>
+          <h3 className="text-xl font-bold text-pink-400 mb-3">Contact Info</h3>
           <ul className="space-y-2">
             <li>📍 123 Pet Street, Dhaka, Bangladesh</li>
             <li>📞 +880 1234 567 890</li>
@@ -18,7 +18,7 @@ const Footer = () => {
 
         {/* ===== Social Links ===== */}
         <div className="animate__animated animate__fadeInUp animate__delay-2s">
-          <h3 className="text-xl font-bold text-primary mb-3">Social Links</h3>
+          <h3 className="text-xl font-bold text-pink-400 mb-3">Social Links</h3>
           <div className="flex flex-wrap gap-4">
             <a
               href="#"
@@ -53,7 +53,7 @@ const Footer = () => {
 
         {/* ===== Privacy Policy ===== */}
         <div className="animate__animated animate__fadeInUp animate__delay-3s">
-          <h3 className="text-xl font-bold text-primary mb-3">Privacy Policy</h3>
+          <h3 className="text-xl font-bold text-pink-400 mb-3">Privacy Policy</h3>
           <ul className="space-y-2">
             <li className="hover:text-primary cursor-pointer transition">Terms & Conditions</li>
             <li className="hover:text-primary cursor-pointer transition">Privacy Policy</li>
@@ -64,7 +64,7 @@ const Footer = () => {
 
       {/* ===== Footer Bottom ===== */}
       <div className="border-t mt-10 pt-4 text-center text-sm text-gray-500 animate__animated animate__fadeIn">
-        © {new Date().getFullYear()} <span className="text-primary font-semibold">PetCare</span>. All rights reserved.
+        © {new Date().getFullYear()} <span className="text-pink-400 font-semibold">PetCare</span>. All rights reserved.
       </div>
     </footer>
   );

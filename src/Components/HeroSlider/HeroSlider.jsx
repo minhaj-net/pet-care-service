@@ -19,7 +19,7 @@ const HeroSlider = () => {
       >
         {petData.map((pet, index) => (
           <SwiperSlide key={index}>
-            <div className="relative h-[700px] md:h-full lg:h-full w-full  flex flex-col md:flex-row items-center justify-between md:px-12 lg:px-20 px-6 text-center md:text-left">
+            <div  className="relative h-[700px] md:h-full lg:h-full w-full  flex flex-col md:flex-row items-center justify-between md:px-12 lg:px-20 px-6 text-center md:text-left">
               {/* Background Image */}
               <img
                 src={pet.image}

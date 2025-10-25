@@ -58,7 +58,7 @@ const SignIn = () => {
    <div>
     <Toaster></Toaster>
     <Navbar></Navbar>
-     <div className="hero bg-gradient-to-r from-pink-400 to-orange-400 relative overflow-hidden min-h-screen">
+     <div className="hero bg-linear-to-r from-pink-400 to-orange-400 relative overflow-hidden min-h-screen">
       
       <title>Petcare- Login</title>
       <div className="absolute inset-0">
@@ -107,7 +107,7 @@ const SignIn = () => {
                       Forgot password?
                     </p>
                 </div>
-                <button className="btn  w-full bg-gradient-to-r from-pink-400 to-orange-400 text-white font-semibold border-none hover:scale-105 transition-transform duration-200">
+                <button className="btn  w-full bg-linear-to-r from-pink-400 to-orange-400 text-white font-semibold border-none hover:scale-105 transition-transform duration-200">
                   Login
                 </button>
                 {/* Devider */}

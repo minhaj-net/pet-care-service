@@ -27,7 +27,7 @@ const PetCareServices = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12  bg-gradient-to-b from-blue-50 via-white to-blue-100 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="max-w-7xl mx-auto px-4 py-12  bg-linear-to-b from-blue-50 via-white to-blue-100 grid grid-cols-1 md:grid-cols-3 gap-6">
       {/* First Card (Special Style) */}
       <div className=" text-white rounded-2xl  animate__animated animate__fadeInLeft shadow-lg">
         <img
