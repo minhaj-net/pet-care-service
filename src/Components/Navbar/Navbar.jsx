@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router";
 import "animate.css";
 import { AuthContext } from "../../Provider/AuthProvider";
-import toast from "react-hot-toast";
+
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -12,8 +12,8 @@ const Navbar = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        toast.success("Log out successful ");
-
+      
+        toast
        
         if (location.pathname === "/profile") {
           navigate("/login"); 
