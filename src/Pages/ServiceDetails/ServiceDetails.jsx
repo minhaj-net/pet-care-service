@@ -1,20 +1,27 @@
 import React, { useEffect, useState } from "react";
-import { FaUser, FaEnvelope, FaDollarSign, FaStar, FaTag } from "react-icons/fa";
+import {
+  FaUser,
+  FaEnvelope,
+  FaDollarSign,
+  FaStar,
+  FaTag,
+} from "react-icons/fa";
 import "animate.css";
 import { Link, useLoaderData, useParams } from "react-router";
 import { RiArrowGoBackFill } from "react-icons/ri";
 
 const ServiceDetails = () => {
-  const {id}=useParams()
+  const { id } = useParams();
   console.log(id);
-  const cardData=useLoaderData()
+  const cardData = useLoaderData();
   console.log(cardData);
-  const [data,SetData]=useState({})
+  const [data, SetData] = useState({});
   console.log(data);
 
-
   useEffect(() => {
-    const newDetails = cardData.find((singleNews) => singleNews.serviceId == id);
+    const newDetails = cardData.find(
+      (singleNews) => singleNews.serviceId == id
+    );
     SetData(newDetails);
   }, [cardData, id]);
 
@@ -38,11 +45,11 @@ const ServiceDetails = () => {
       <div className="max-w-5xl mx-auto px-6 md:px-0">
         {/* Service Banner */}
         <div className="rounded-2xl overflow-hidden shadow-lg mb-8">
-          <img
+          {/* <img
             src={data.image}
             alt={data.serviceName}
             className="w-full h-64 md:h-96 object-cover"
-          />
+          /> */}
         </div>
 
         {/* Service Details */}
@@ -54,13 +61,16 @@ const ServiceDetails = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex items-center gap-2 text-gray-700">
-              <FaUser className="text-pink-400" /> <span>{data.providerName}</span>
+              <FaUser className="text-pink-400" />{" "}
+              <span>{data.providerName}</span>
             </div>
             <div className="flex items-center gap-2 text-gray-700">
-              <FaEnvelope className="text-pink-400" /> <span>{data.providerEmail}</span>
+              <FaEnvelope className="text-pink-400" />{" "}
+              <span>{data.providerEmail}</span>
             </div>
             <div className="flex items-center gap-2 text-gray-700">
-              <FaDollarSign className="text-pink-400" /> <span>${data.price}</span>
+              <FaDollarSign className="text-pink-400" />{" "}
+              <span>${data.price}</span>
             </div>
             <div className="flex items-center gap-2 text-gray-700">
               <FaStar className="text-yellow-400" /> <span>{data.rating}</span>
@@ -69,7 +79,8 @@ const ServiceDetails = () => {
               <FaTag className="text-pink-400" /> <span>{data.category}</span>
             </div>
             <div className="flex items-center gap-2 text-gray-700">
-              <FaUser className="text-pink-400" /> <span>Service ID: {data .serviceId}</span>
+              <FaUser className="text-pink-400" />{" "}
+              <span>Service ID: {data.serviceId}</span>
             </div>
           </div>
         </div>
@@ -82,7 +93,10 @@ const ServiceDetails = () => {
           <h3 className="text-2xl font-semibold text-gray-800 mb-6">
             Book Service
           </h3>
-          <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <form
+            onSubmit={handleSubmit}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          >
             <div>
               <label className="block text-gray-700 mb-2">Name</label>
               <input
@@ -112,7 +126,7 @@ const ServiceDetails = () => {
                 to="/"
                 className="btn px-8 bg-gradient-to-r from-blue-400 to-violet-400 text-white font-semibold border-none hover:scale-105 transition-transform duration-200 "
               >
-               <RiArrowGoBackFill /> Go Back
+                <RiArrowGoBackFill /> Go Back
               </Link>
               <button
                 type="submit"

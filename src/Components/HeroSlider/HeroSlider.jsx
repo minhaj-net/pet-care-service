@@ -9,7 +9,7 @@ const HeroSlider = () => {
   const petData = useLoaderData();
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className=" h-screen  max-w-7xl mx-auto">
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}

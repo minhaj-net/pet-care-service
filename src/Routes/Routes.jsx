@@ -14,47 +14,45 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component:MainLayout,
-    errorElement:<ErrorPage></ErrorPage>,
-    children:[
+    Component: MainLayout,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
       {
-        index:true,
-        Component:HomePage,
-        loader:()=>fetch("/petCareData.json"),
-        hydrateFallbackElement:<Loading></Loading>
+        index: true,
+        Component: HomePage,
+        loader: () => fetch("/petCareData.json"),
+        hydrateFallbackElement: <Loading></Loading>,
       },
       {
-        path:"/services",
-        Component:Services,
-        loader:()=>fetch("/petCareData.json"),
-        hydrateFallbackElement:<Loading></Loading>,
+        path: "/services",
+        Component: Services,
+        loader: () => fetch("/petCareData.json"),
+        hydrateFallbackElement: <Loading></Loading>,
       },
       {
-        path:"/profile",
-        Component:MyProfilePage
+        path: "/profile",
+        Component: MyProfilePage,
       },
       {
-        path:"/service-details/:id",
-        element:<PrivateRoute>
-          <ServiceDetails></ServiceDetails>
-        </PrivateRoute>,
-        loader:()=>fetch("/petCareData.json"),
-       hydrateFallbackElement:<Loading></Loading>
+        path: "/service-details/:id",
+        element: <ServiceDetails></ServiceDetails>,
+        loader: () => fetch("/petCareData.json"),
+        hydrateFallbackElement: <Loading></Loading>,
       },
-    ]
+    ],
   },
   {
-    path:"/login",
-    Component:LoginPage,
-    loader:()=>fetch("/petCareData.json"),
-    hydrateFallbackElement:<Loading></Loading>
+    path: "/login",
+    Component: LoginPage,
+    loader: () => fetch("/petCareData.json"),
+    hydrateFallbackElement: <Loading></Loading>,
   },
   {
-    path:"/signup",
-    Component:SignUp
+    path: "/signup",
+    Component: SignUp,
   },
   {
-    path:"/forget-password",
-    Component:ForgetPasswordPage
+    path: "/forget-password",
+    Component: ForgetPasswordPage,
   },
 ]);
