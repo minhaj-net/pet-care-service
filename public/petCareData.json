@@ -9,7 +9,13 @@
     "slotsAvailable": 4,
     "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
     "image": "https://i.ibb.co.com/Y474kj3V/6361c549a882fb55392969ce0344f567.jpg",
-    "category": "Clothing"
+    "category": "Clothing",
+
+    "duration": "30 minutes",
+    "location": "Downtown PawCare Center",
+    "isAvailable": true,
+    "maxPets": 2,
+    "reviewsCount": 120
   },
   {
     "serviceId": 2,
@@ -21,7 +27,13 @@
     "slotsAvailable": 3,
     "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo.",
     "image": "https://i.ibb.co.com/gh7ZxS6/bc037628906090e44ed84dd1616719a0.jpg",
-    "category": "Grooming"
+    "category": "Grooming",
+
+    "duration": "45 minutes",
+    "location": "CozyPets Grooming Hub",
+    "isAvailable": true,
+    "maxPets": 1,
+    "reviewsCount": 98
   },
   {
     "serviceId": 3,
@@ -33,7 +45,13 @@
     "slotsAvailable": 6,
     "description": "Rent heated beds and blankets to keep your pets cozy during cold nights.",
     "image": "https://i.ibb.co.com/4ny0WMF3/6e551f99c83d10a0fb770e136719a3c4.jpg",
-    "category": "Accessories"
+    "category": "Accessories",
+
+    "duration": "24 hours rental",
+    "location": "WarmPaws Warehouse",
+    "isAvailable": true,
+    "maxPets": 5,
+    "reviewsCount": 76
   },
   {
     "serviceId": 4,
@@ -45,7 +63,13 @@
     "slotsAvailable": 5,
     "description": "Protect your pet's paws from ice, salt, and cold with natural wax treatments.",
     "image": "https://i.ibb.co.com/Nz5Tp6q/742603c10f98a75c54acb9ac3b3f0286.jpg",
-    "category": "Health"
+    "category": "Health",
+
+    "duration": "20 minutes",
+    "location": "PawShield Clinic",
+    "isAvailable": true,
+    "maxPets": 3,
+    "reviewsCount": 110
   },
   {
     "serviceId": 5,
@@ -57,7 +81,13 @@
     "slotsAvailable": 4,
     "description": "Custom sweaters and warm clothing tailored for cats to enjoy winter comfortably.",
     "image": "https://i.ibb.co.com/b5xtNw69/f506d9d37857bf3158253afc5afd6831.jpg",
-    "category": "Clothing"
+    "category": "Clothing",
+
+    "duration": "25 minutes",
+    "location": "FelineWarmth Studio",
+    "isAvailable": true,
+    "maxPets": 2,
+    "reviewsCount": 140
   },
   {
     "serviceId": 6,
@@ -69,7 +99,13 @@
     "slotsAvailable": 3,
     "description": "Soothing massages to improve circulation and warmth for pets during the cold season.",
     "image": "https://i.ibb.co.com/KcMm82hv/ec6f0b13e95ecf38bbc65a5547220fd6.jpg",
-    "category": "Wellness"
+    "category": "Wellness",
+
+    "duration": "60 minutes",
+    "location": "RelaxPaws Spa Center",
+    "isAvailable": false,
+    "maxPets": 1,
+    "reviewsCount": 85
   },
   {
     "serviceId": 7,
@@ -81,7 +117,13 @@
     "slotsAvailable": 5,
     "description": "Custom diet plans to maintain hydration and energy for pets during winter.",
     "image": "https://i.ibb.co.com/KjZnYCzw/59bca72176398b327b480db18a3f02eb.jpg",
-    "category": "Nutrition"
+    "category": "Nutrition",
+
+    "duration": "1 hour consultation",
+    "location": "HealthyPaws Clinic",
+    "isAvailable": true,
+    "maxPets": 1,
+    "reviewsCount": 67
   },
   {
     "serviceId": 8,
@@ -93,7 +135,13 @@
     "slotsAvailable": 7,
     "description": "Fitting and sale of warm and protective boots to prevent cold injuries on paws.",
     "image": "https://i.ibb.co.com/V0Vm1fCM/bd611cb2f685cbf862baac4b9695ad1a.jpg",
-    "category": "Accessories"
+    "category": "Accessories",
+
+    "duration": "15 minutes",
+    "location": "StepSafe Outlet",
+    "isAvailable": true,
+    "maxPets": 4,
+    "reviewsCount": 90
   },
   {
     "serviceId": 9,
@@ -105,7 +153,13 @@
     "slotsAvailable": 8,
     "description": "Supervised indoor play sessions with heating to keep pets active and warm.",
     "image": "https://i.ibb.co.com/hRkt4k7v/2f44044eccf5890d1af670dab7a041bd.jpg",
-    "category": "Daycare"
+    "category": "Daycare",
+
+    "duration": "2 hours",
+    "location": "CozyPaws Indoor Center",
+    "isAvailable": true,
+    "maxPets": 10,
+    "reviewsCount": 150
   },
   {
     "serviceId": 10,
@@ -117,6 +171,12 @@
     "slotsAvailable": 4,
     "description": "Comprehensive health checkup to ensure pets stay healthy and safe during winter months.",
     "image": "https://i.ibb.co.com/27YDK5Vr/fc05245b15388189b6ed1d8f63573380.jpg",
-    "category": "Health"
+    "category": "Health",
+
+    "duration": "40 minutes",
+    "location": "SnowSafe Veterinary Clinic",
+    "isAvailable": true,
+    "maxPets": 1,
+    "reviewsCount": 200
   }
 ]
